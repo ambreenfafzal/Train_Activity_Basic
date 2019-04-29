@@ -8,7 +8,7 @@ td, th {
       padding: 8px;
   text-align: left;
 border-bottom: 1px solid #ddd;
-z-index: 1; 
+/* z-index: 1;  */
     
 }
 
@@ -60,6 +60,15 @@ margin-right: 20px;
     margin-left: 20px;
 }
 
+#frequency-label {
+    margin-left: 20px; 
+}
+
+#frequency {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 #button {
     margin-bottom: 10px;
     margin-left: 80%;
@@ -88,24 +97,24 @@ margin-right: 20px;
     justify-content: center;
     
 } */
-.jumbotron  {
-    position: relative;
-    z-index: -101;
-}
-#video {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: -100;
-    width:100%;
-}
+
+
 #table {
     background-color: white;
 }
 
 .container h1 , p {
-    color: white;
+    color: orangered;
+ 
+
 }
+ #jumbo {
+    background-color:transparent !important; 
+ }
+
+ #photo {
+     background-position: center;
+ }
+ p {
+     margin-left: 500px;
+ }

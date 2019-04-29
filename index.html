@@ -9,6 +9,7 @@
     <!-- Style Sheet -->
     <link rel="stylesheet" href="assets/styles.css">
     <!-- LINK TO FIREBASE GOES HERE -->
+    
     <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -16,18 +17,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body background="photo.jpg" id="photo" >
 
-    <div class="jumbotron jumbotron-fluid">
+       
+    <div class="jumbotron jumbotron-fluid" id="jumbo" >
 
 
-        <video autoplay muted loop id="video">
-            <source src="assets/video/Sub.mp4" type="video/mp4">
-            <!-- <h1 class="display-4">Chicago Train Schedule</h1> -->
-        </video>
+        
         <div class="container">
-            <h1 class="display-4">Chicago Train Schedule</h1>
-            <p class="lead">Never miss another train</p>
+            <h1 class="display-4"><strong>Chicago Train Schedule</strong></h1>
+            <p class="lead"><i>....never miss another train</i></p>
 
             <div id="div-title">
 
@@ -37,23 +36,25 @@
 
             <table id="table">
 
-                <tr>
-                    <thead>
-                        <th>Train Name</th>
-                        <th>Destination</th>
-                        <th>Frequency (min)</th>
-                        <th>Next Arrival</th>
-                        <th>Minutes Away</th>
-                    </thead>
+        <tr>
+                <thead>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>Frequency (min)</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>
+                </thead>
 
-                </tr>
-                <tr>
-                    <td>Hogwarts Express</td>
-                    <td>Hogwarts School of Witch Craft and Wizardry</td>
-                    <td>25</td>
-                    <td>30 </td>
-                    <td>10</td>
-                </tr>
+            </tr>
+            <!-- <tr>
+                <td>Hogwarts Express</td>
+                <td>Hogwarts School of Witch Craft and Wizardry</td>
+                <td>25</td>
+                <td>30 </td>
+                <td>10</td>
+            </tr> -->
+
+                
             </table>
 
 
@@ -69,17 +70,21 @@
                 <div id="form-div">
                     <div class="form-group row">
                         <label id="train-label"><strong>Train Name:</strong> </label>
-                        <input type="email" class="form-control form-control-sm" id="train-name"
+                        <input type="text" class="form-control form-control-sm" id="train-name"
                             placeholder="Enter the Train Name">
 
                         <br>
                         <label id="destination-label"><strong>Destination:</strong></label>
-                        <input type="email" class="form-control form-control-sm" id="destination-name"
+                        <input type="text" class="form-control form-control-sm" id="destination-name"
                             placeholder="Enter the Destination Name">
 
                         <label id="time-label"><strong>First Train Time (HH:mm - Military Time):</strong></label>
-                        <input type="email" class="form-control form-control-sm" id="time-entered"
+                        <input type="text" class="form-control form-control-sm" id="time-entered"
                             placeholder="Enter the Train Time">
+
+                            <label id="frequency-label"><strong> Frequency (min):</strong></label>
+                            <input type="text" class="form-control form-control-sm" id="frequency"
+                                placeholder="Enter the Train Frequency">
 
                     </div>
                     <button id="button" type="button" class="btn btn-outline-secondary">Submit</button>
@@ -97,11 +102,18 @@
 
 
 
+    <!-- <video autoplay muted loop id="video">
+            <source src="assets/video/Sub.mp4" type="video/mp4">
+             <h1 class="display-4">Chicago Train Schedule</h1> -->
+        <!-- </video>  -->
 
 
 
+    <!-- Firebase Script -->
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
 
-    <!-- Script -->
+    <!-- moment.js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <script src="script.js"></script>
 </body>
 
